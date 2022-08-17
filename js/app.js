@@ -22,7 +22,7 @@ function adivinar(e){
     console.log(numeroIngresado);
     if (numeroAdivinar === numeroIngresado) {
         alertas.innerHTML = '¡ADIVINASTE!'
-        alertas.className = 'alert alert-success my-4'
+        alertas.className = 'alert alert-info my-4'
         btnComenzar.className = 'btn btn-success my-4'
         formulario.reset();
       } else if (numeroAdivinar < numeroIngresado) {
