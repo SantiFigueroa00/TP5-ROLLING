@@ -21,15 +21,17 @@ function adivinar(e){
     let numeroIngresado = parseInt(document.querySelector('input').value);
     console.log(numeroIngresado);
     if (numeroAdivinar === numeroIngresado) {
-        formulario.reset();
-        btnComenzar.className = 'btn btn-success my-4'
         alertas.innerHTML = '¡ADIVINASTE!'
         alertas.className = 'alert alert-success my-4'
-      } else if (numeroAdivinar < numeroIngresado) {
-        alert("El numero es menor al que usted ingreso.");
+        btnComenzar.className = 'btn btn-success my-4'
         formulario.reset();
+      } else if (numeroAdivinar < numeroIngresado) {
+          alertas.innerHTML = 'El numero es MENOR al que usted ingreso.'
+          alertas.className = 'alert alert-warning my-4'
+          formulario.reset();
       } else{
-          alert("El numero es mayor al que usted ingreso.")
+          alertas.innerHTML = 'El numero es MAYOR al que usted ingreso.'
+          alertas.className = 'alert alert-warning my-4'
           formulario.reset();
       }
 }
